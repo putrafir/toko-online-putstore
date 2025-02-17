@@ -3,7 +3,7 @@ import Link from "next/link";
 const LoginView = () => {
   return (
     <div className=" items-center justify-center h-svh flex w-svw">
-      <div className="w-[40%] max-w-sm ">
+      <div className="w-[65%] max-w-sm ">
         <h1 className=" mb-8 text-3xl text-center text-blue-700">Login</h1>
         <form className="mx-auto">
           <div className="mb-5">

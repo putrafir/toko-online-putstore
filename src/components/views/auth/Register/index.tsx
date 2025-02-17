@@ -38,7 +38,7 @@ const RegisterView = () => {
   };
   return (
     <div className=" items-center justify-center h-svh flex w-svw">
-      <div className="w-[40%] max-w-sm ">
+      <div className="w-[65%] max-w-sm ">
         <h1 className=" mb-8 text-3xl text-center text-blue-700">Register</h1>
         {error && (
           <div className="bg-red-200 text-red-700 p-2.5 rounded-lg mb-5">
