@@ -4,14 +4,11 @@ import {
   doc,
   getDoc,
   getDocs,
-  getFirestore,
   query,
   where,
 } from "firebase/firestore";
-import app from "./init";
+import { firestore } from "./init";
 import bcrypt from "bcrypt";
-
-const firestore = getFirestore(app);
 
 export async function retrieveData(collectionName: string) {
   const snapshot = await getDocs(collection(firestore, collectionName));
@@ -51,7 +48,7 @@ export async function signUp(
       userData.role = "member";
     }
     userData.password = await bcrypt.hash(userData.password, 10);
-    await addDoc(collection(firestore, "user"), userData)
+    await addDoc(collection(firestore, "users"), userData)
       .then(() => {
         callback(true);
       })
