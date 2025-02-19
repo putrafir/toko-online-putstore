@@ -24,7 +24,7 @@ const Navbar = () => {
               href="tel:5541251234"
               className="text-sm  text-gray-500 dark:text-white hover:underline"
             >
-              (555) 412-1234
+              {data?.user?.email}
             </a>
             <a
               href="#"
