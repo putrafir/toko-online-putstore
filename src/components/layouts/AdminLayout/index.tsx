@@ -1,6 +1,9 @@
 import Sidebar from "@/components/fragments/Sidebar";
 import { IconDashboard, IconProducts } from "@/components/ui/Icons/IconSidebar";
 
+type Proptypes = {
+  children: React.ReactNode;
+};
 const listSidebarItem = [
   {
     title: "Dashboard",
@@ -13,15 +16,14 @@ const listSidebarItem = [
     icon: <IconProducts />,
   },
 ];
-const AdminPage = () => {
+const AdminLayout = (props: Proptypes) => {
+  const { children } = props;
   return (
-    // <AdminLayout>
-    //   <div>
-    //     <h1>Admin Page</h1>
-    //   </div>
-    // </AdminLayout>
-    <Sidebar lists={listSidebarItem}></Sidebar>
+    <div>
+      <Sidebar lists={listSidebarItem} />
+      {children}
+    </div>
   );
 };
 
-export default AdminPage;
+export default AdminLayout;

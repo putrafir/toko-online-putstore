@@ -11,7 +11,9 @@
   "dependencies": {
     "axios": "^1.7.9",
     "bcrypt": "^5.1.1",
+    "chart.js": "^4.4.8",
     "firebase": "^11.3.1",
+    "flowbite": "^3.1.2",
     "flowbite-react": "^0.10.2",
     "next": "14.0.3",
     "next-auth": "^4.24.5",
