@@ -6,6 +6,7 @@ import Input from "@/components/ui/Input";
 import Button from "@/components/ui/Button";
 import CircleLoading from "../Icon/Loading/CircleLoading";
 import { authServices } from "@/services/auth";
+import AuthLayout from "@/components/layouts/AuthLayout";
 const RegisterView = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
@@ -42,45 +43,37 @@ const RegisterView = () => {
     }
   };
   return (
-    <div className=" items-center justify-center h-svh flex w-svw">
-      <div className="w-[65%] max-w-sm ">
-        <h1 className=" mb-8 text-3xl text-center text-blue-700">Register</h1>
-        {error && (
-          <div className="bg-red-200 text-red-700 p-2.5 rounded-lg mb-5">
-            {error}
-          </div>
-        )}
-        <form className="mx-auto" onSubmit={handleSubmit}>
-          <Input
-            label="Fullname"
-            type="text"
-            name="fullname"
-            placeholder="Ahmad Kasim"
-          />
-          <Input
-            label="Email"
-            type="email"
-            name="email"
-            placeholder="kasim@gmail.com"
-          />
-          <Input label="Phone" type="number" name="phone" />
-          <Input label="Password" type="password" name="password" />
+    <AuthLayout title="Register" error={error}>
+      <form className="mx-auto" onSubmit={handleSubmit}>
+        <Input
+          label="Fullname"
+          type="text"
+          name="fullname"
+          placeholder="Ahmad Kasim"
+        />
+        <Input
+          label="Email"
+          type="email"
+          name="email"
+          placeholder="kasim@gmail.com"
+        />
+        <Input label="Phone" type="number" name="phone" />
+        <Input label="Password" type="password" name="password" />
 
-          <div className="flex items-start mb-5">
-            <p>
-              Have an account? Sign in{" "}
-              <Link href="/auth/login" className="text-blue-700">
-                here
-              </Link>
-            </p>
-          </div>
-          <Button type="submit" variant="darkBlue">
-            {isLoading ? <CircleLoading /> : ""}
-            {isLoading ? "Loading..." : "Register"}
-          </Button>
-        </form>
-      </div>
-    </div>
+        <div className="flex items-start mb-5">
+          <p>
+            Have an account? Sign in{" "}
+            <Link href="/auth/login" className="text-blue-700">
+              here
+            </Link>
+          </p>
+        </div>
+        <Button type="submit" variant="darkBlue">
+          {isLoading ? <CircleLoading /> : ""}
+          {isLoading ? "Loading..." : "Register"}
+        </Button>
+      </form>
+    </AuthLayout>
   );
 };
 
