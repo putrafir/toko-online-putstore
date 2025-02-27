@@ -1,5 +1,6 @@
 import Sidebar from "@/components/fragments/Sidebar";
 import { IconDashboard, IconProducts } from "@/components/ui/Icons/IconSidebar";
+import DashboardAdminView from "@/components/views/admin/Dashboard";
 
 const listSidebarItem = [
   {
@@ -15,12 +16,9 @@ const listSidebarItem = [
 ];
 const AdminPage = () => {
   return (
-    // <AdminLayout>
-    //   <div>
-    //     <h1>Admin Page</h1>
-    //   </div>
-    // </AdminLayout>
-    <Sidebar lists={listSidebarItem}></Sidebar>
+    <>
+      <DashboardAdminView></DashboardAdminView>
+    </>
   );
 };
 
