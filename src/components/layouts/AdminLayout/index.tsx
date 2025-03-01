@@ -1,5 +1,9 @@
 import Sidebar from "@/components/fragments/Sidebar";
-import { IconDashboard, IconProducts } from "@/components/ui/Icons/IconSidebar";
+import {
+  IconDashboard,
+  IconProducts,
+  IconUsers,
+} from "@/components/ui/Icons/IconSidebar";
 
 type Proptypes = {
   children: React.ReactNode;
@@ -15,13 +19,18 @@ const listSidebarItem = [
     url: "/admin/products",
     icon: <IconProducts />,
   },
+  {
+    title: "Users",
+    url: "/admin/users",
+    icon: <IconUsers />,
+  },
 ];
 const AdminLayout = (props: Proptypes) => {
   const { children } = props;
   return (
-    <div>
+    <div className="flex">
       <Sidebar lists={listSidebarItem} />
-      {children}
+      <div className="w-full py-10 px-16">{children}</div>
     </div>
   );
 };

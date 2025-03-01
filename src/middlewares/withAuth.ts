@@ -23,7 +23,7 @@ export default function WithAuth(
       if (!token) {
         const url = new URL("/auth/login", req.url);
         url.searchParams.set("callbackUrl", req.url);
-        return NextResponse.redirect(url); 
+        return NextResponse.redirect(url);
       }
       if (token) {
         if (authPage.includes(pathname)) {
