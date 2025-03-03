@@ -5,9 +5,11 @@ import {
   getDoc,
   getDocs,
   query,
+  updateDoc,
   where,
 } from "firebase/firestore";
 import { firestore } from "./init";
+import { callback } from "chart.js/helpers";
 
 export async function retrieveData(collectionName: string) {
   const snapshot = await getDocs(collection(firestore, collectionName));
@@ -50,5 +52,21 @@ export async function addData(
     .catch((error) => {
       callback(false);
       console.log(error);
+    });
+}
+
+export async function updateData(
+  collectionName: string,
+  id: string,
+  data: any,
+  callback: Function
+) {
+  const docRef = doc(firestore, collectionName, id);
+  await updateDoc(docRef, data)
+    .then(() => {
+      callback(true);
+    })
+    .catch((error) => {
+      callback(false);
     });
 }
