@@ -7,7 +7,7 @@ const Navbar = ({ toggleSidebar }: any) => {
   return (
     <>
       <nav className="bg-white border-gray-200 ">
-        <div className="flex flex-wrap justify-between items-center  max-w-screen-xl p-4">
+        <div className="flex flex-wrap  justify-between items-center  p-4">
           <button
             className=" top-4 left-4  block sm:hidden"
             onClick={toggleSidebar}
@@ -28,7 +28,7 @@ const Navbar = ({ toggleSidebar }: any) => {
             </svg>
           </button>
 
-          <div className="xl:flex items-center sm:block hidden space-x-3 rtl:space-x-reverse">
+          <div className="md:flex items-center sm:block hidden space-x-3 rtl:space-x-reverse">
             <img
               src="https://flowbite.com/docs/images/logo.svg"
               className="h-8"
@@ -38,7 +38,7 @@ const Navbar = ({ toggleSidebar }: any) => {
               Flowbite
             </span>
           </div>
-          <div className="flex items-center space-x-6 rtl:space-x-reverse">
+          <div className="flex items-center space-x-6 sm:pr-4">
             <a
               href="tel:5541251234"
               className="text-sm  text-gray-500 hover:underline"
