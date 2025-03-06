@@ -93,14 +93,14 @@ const UsersAdminView = (props: PropTypes) => {
         </div>
       </AdminLayout>
 
-      {Object.keys(updatedUser).length && (
+      {Object.keys(updatedUser).length > 0 && (
         <ModalUpdateUser
           updatedUser={updatedUser}
           setUpdatedUSer={setUpdatedUser}
           setUsersData={setUsersData}
         />
       )}
-      {Object.keys(deletedUser).length && (
+      {Object.keys(deletedUser).length > 0 && (
         <ModalDeletedUser
           deletedUser={deletedUser}
           setDeletedUser={setDeletedUser}
