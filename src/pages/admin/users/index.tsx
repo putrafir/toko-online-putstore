@@ -11,7 +11,6 @@ const AdminUserPage = () => {
     };
     getAllUsers();
   }, []);
-  console.log(users);
 
   return (
     <>

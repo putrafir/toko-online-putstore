@@ -3,9 +3,11 @@ type PropTypes = {
   type: string;
   name: string;
   placeholder?: string;
+  defaultValue?: string;
+  disabled?: boolean;
 };
 const Input = (props: PropTypes) => {
-  const { label, type, name, placeholder } = props;
+  const { label, type, name, placeholder, disabled, defaultValue } = props;
   return (
     <div className="mb-5">
       {label && (
@@ -21,6 +23,8 @@ const Input = (props: PropTypes) => {
         id={name}
         name={name}
         placeholder={placeholder}
+        defaultValue={defaultValue}
+        disabled={disabled}
         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5    "
         required
       />
