@@ -20,7 +20,7 @@ export default function UserMetaCard({ profile }: any) {
         <div className="flex flex-col gap-5 xl:flex-row xl:items-center xl:justify-between">
           <div className="flex flex-col items-center w-full gap-6 xl:flex-row">
             <div className="w-20 h-20 overflow-hidden border border-gray-200 rounded-full ">
-              <Image width={80} height={80} src={profile.image} alt="user" />
+              <img width={80} height={80} src={profile.image} alt="user" />
             </div>
             <div className="order-3 xl:order-2">
               <h4 className="mb-2 text-lg font-semibold text-center text-gray-800 xl:text-left">
