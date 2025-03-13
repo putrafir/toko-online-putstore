@@ -26,7 +26,6 @@ const ModalUpdateUser = (props: any) => {
       session.data.accessToken
     );
 
-    console.log(result);
 
     if (result.status === 200) {
       form.reset();

@@ -14,6 +14,10 @@ export const userServices = {
     instance.delete(`/api/user/${id}`, {
       headers: { Authorization: `Bearer ${token}` },
     }),
+  getProfile: (token: string) =>
+    instance.get("/api/user/profile", {
+      headers: { Authorization: `Bearer ${token}` },
+    }),
 };
 
 export default userServices;

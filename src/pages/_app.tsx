@@ -4,7 +4,7 @@ import { SessionProvider } from "next-auth/react";
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
 
-const disableNavbar = ["auth", "admin"];
+const disableNavbar = ["auth", "admin", "member"];
 
 export default function App({
   Component,
